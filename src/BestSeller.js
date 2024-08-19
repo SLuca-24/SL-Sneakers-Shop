@@ -28,11 +28,6 @@ function BestSeller() {
   };
 
   // stato per le card
-  const [selectedSize, setSelectedSize] = useState('');
-  const [isAvailable, setIsAvailable] = useState(true);
-  const [message, setMessage] = useState('');
-  const [requestButton, setRequestButton] = useState ('')
-  const [availableSizes, setAvailableSizes] = useState('')
   const [cardsState, setCardsState] = useState([
     { id: 1, selectedSize: '', isAvailable: false, message: '', cancelButton: '', spuntaButton: '', requestButton: '', availableSizes: ['45', '47.5'], showCheckButton: true  },
     { id: 2, selectedSize: '', isAvailable: false, message: '', cancelButton: '', spuntaButton: '', requestButton: '', availableSizes: ['36', '37.5', '38', '38.5', '40.5', '42', '44', '44.5'], showCheckButton: true },

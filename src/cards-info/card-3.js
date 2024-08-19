@@ -3,7 +3,7 @@ import React from 'react';
 import SpezialSportyBrown from "../img/spzSportyBrown.png"
 
 
-const CardInfo3 = ({}) => {
+const CardInfo3 = () => {
   return (
     <>
           <img src={SpezialSportyBrown} alt="BestSeller-Pic" />

@@ -3,7 +3,7 @@ import React from 'react';
 import J4Gold from "../img/j4-gold.png"
 
 
-const CardInfo2 = ({}) => {
+const CardInfo2 = () => {
   return (
     <>
           <img src={J4Gold} alt="BestSeller-Pic" />
