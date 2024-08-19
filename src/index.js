@@ -4,7 +4,6 @@ import './index.css';
 import Header from './Header';
 import BestSeller from "./BestSeller"
 import Newsletter from './Newsletter';
-import Models from './Models'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +12,6 @@ root.render(
     <Header />
     <BestSeller />
     <Newsletter />
-    <Models />
   </React.StrictMode>
 );
 
