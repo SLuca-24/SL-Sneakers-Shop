@@ -52,10 +52,10 @@ function BestSeller() {
         card.id === id
           ? {
               ...card,
-              message: isAvailable ? '' : 'sold out ❌',
+              message: isAvailable ? '' : 'sold out',
               spuntaButton: isAvailable ? '' : '',
               cancelButton: isAvailable ? '' : '',
-              requestButton: isAvailable ? 'Request your pair ✔️' : '',
+              requestButton: isAvailable ? 'Request your pair' : '',
               showCheckButton: false 
             }
           : card
@@ -91,10 +91,7 @@ function BestSeller() {
               <CardInfo />
               <select name="request_type" required onChange={(e) => handleSizeChange(e, card.id)} className="styled-select">
                 <option value="" disabled selected>Choose size</option>
-                {card.availableSizes.map(size => (
-                  <option key={size} value={size}>{size}</option>
-                ))}
-                          <option value="36" >36.</option>
+          <option value="36">36</option>
           <option value="36.5" >36.5</option>
           <option value="37.5" >37.5</option>
           <option value="38" >38</option>

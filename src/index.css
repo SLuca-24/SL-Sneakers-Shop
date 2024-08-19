@@ -92,7 +92,7 @@ transition: transform 0.5s;
   scroll-behavior: smooth;
   flex-grow: 1;
   gap: 90px;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .BestSeller-card {
