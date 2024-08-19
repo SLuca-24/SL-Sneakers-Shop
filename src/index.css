@@ -79,6 +79,7 @@ transition: transform 0.5s;
 
 .BestSeller-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   overflow: hidden;
@@ -496,6 +497,111 @@ display: none;
 
 
 
+
+
+
+#order-form{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+}
+
+
+#order-form input[type="text"],
+#order-form input[type="email"],
+#order-form input[type="phone"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+
+#order-form input[type="text"]:focus,
+#order-form input[type="email"]:focus,
+#order-form input[type="phone"]:focus {
+  border-color: #007bff; 
+  outline: none;
+}
+
+
+#order-form label {
+  display: block;
+  font-family: arial;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  background-color: #388e3c;
+  transform: translateY(0);
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+#order-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+}
+
+#order-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+.x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.x:hover{
+  transform: scale(1.2);
+}
 
 
 

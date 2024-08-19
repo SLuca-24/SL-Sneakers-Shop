@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import CardInfo1 from "./cards-info/card-1"
 import CardInfo2 from "./cards-info/card-2"
 import CardInfo3 from "./cards-info/card-3"
@@ -79,6 +79,22 @@ function BestSeller() {
     setCardsState(newCardsState);
   }
 
+  // order form
+
+
+    const [isRequested, setIsRequested] = useState(false);
+  
+    function toggleIsRequested() {
+      setIsRequested(true);
+    }
+
+    function closeForm(){
+      setIsRequested(false)
+    }
+  
+
+
+
   return (
     <div className="BestSeller-container">
       <button className="scroll-button" id="scroll-left" onClick={scrollLeft}>←</button>
@@ -123,14 +139,82 @@ function BestSeller() {
               </div>
 
               {card.requestButton && (
-                <div className="request-button">{card.requestButton}</div>
+                <div className="request-button" onClick={toggleIsRequested}>{card.requestButton}</div>
               )}
+
+
             </div>
           );
         })}
 
+
       </div>
       <button className="scroll-button" id="scroll-right" onClick={scrollRight}>→</button>
+
+      {isRequested && (
+      <div id="order-form">
+        <div className="x" onClick={closeForm}>❌</div>
+        <input type='text' placeholder='Full name'/>
+        <input type='email' placeholder='Email'/>
+        <input type='phone' placeholder='Phone number '/>
+        <input type='text' placeholder='Full address'/>
+        <input type='text' placeholder='Postal code'/>
+        <input type='text' placeholder='City'/>
+        <select>
+        <option value="" disabled selected>Country</option>
+          <option>Italy</option>
+          <option>Albania</option>
+          <option>Andorra</option>
+          <option>Armenia</option>
+          <option>Austria</option>
+          <option>Azerbaijan</option>
+          <option>Belarus</option>
+          <option>Belgium</option>
+          <option>Bosnia and Herzegovina</option>
+          <option>Bulgaria</option>
+          <option>Croatia</option>
+          <option>Cyprus</option>
+          <option>Czech Republic</option>
+          <option>Denmark</option>
+          <option>Estonia</option>
+          <option>Finland</option>
+          <option>France</option>
+          <option>Georgia</option>
+          <option>Germany</option>
+          <option>Greece</option>
+          <option>Hungary</option>
+          <option>Iceland</option>
+          <option>Ireland</option>
+          <option>Kosovo</option>
+          <option>Latvia</option>
+          <option>Liechtenstein</option>
+          <option>Lithuania</option>
+          <option>Luxembourg</option>
+          <option>Malta</option>
+          <option>Moldova</option>
+          <option>Monaco</option>
+          <option>Montenegro</option>
+          <option>Netherlands</option>
+          <option>North Macedonia</option>
+          <option>Norway</option>
+          <option>Poland</option>
+          <option>Portugal</option>
+          <option>Romania</option>
+          <option>Russia</option>
+          <option>San Marino</option>
+          <option>Serbia</option>
+          <option>Slovakia</option>
+          <option>Slovenia</option>
+          <option>Spain</option>
+          <option>Sweden</option>
+          <option>Switzerland</option>
+          <option>Turkey</option>
+          <option>Ukraine</option>
+          <option>United Kingdom</option>
+        </select>
+        <button type='submit' className="submit-button">Submit</button>
+      </div>
+      )}
     </div>
   );
 }
