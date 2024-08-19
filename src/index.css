@@ -131,7 +131,6 @@ transition: transform 0.5s;
 
 .scroll-button {
   background: transparent;
-  color: transparent;
   transition: color 0.3s ease;
   font-size: 50px;
   border: none;

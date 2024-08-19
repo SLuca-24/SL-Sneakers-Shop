@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState} from 'react';
 import CardInfo1 from "./cards-info/card-1"
 import CardInfo2 from "./cards-info/card-2"
 import CardInfo3 from "./cards-info/card-3"
@@ -146,10 +146,8 @@ function BestSeller() {
             </div>
           );
         })}
-
-
       </div>
-      <button className="scroll-button" id="scroll-right" onClick={scrollRight}>→</button>
+      
 
       {isRequested && (
       <div id="order-form">
@@ -215,6 +213,8 @@ function BestSeller() {
         <button type='submit' className="submit-button">Submit</button>
       </div>
       )}
+
+<button className="scroll-button" id="scroll-right" onClick={scrollRight}>→</button>
     </div>
   );
 }
