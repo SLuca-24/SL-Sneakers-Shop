@@ -1,13 +1,509 @@
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', 'Roboto', ;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color:whitesmoke;
+  color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* header.js */
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: rgba(54, 41, 38, 0.863);
+
 }
+
+.mobile-menu, .hamburger{
+  display: none;
+}
+
+.logo {
+  border: transparent;
+  border-radius: 80px;
+  height: 90px;
+  transition: transform 0.5s;
+}
+
+.logo:hover{
+  transform: scale(1.09);
+  cursor: pointer;
+}
+
+
+.header-logo-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo-name h1{
+color: rgb(78, 52, 46);
+color: #FFF9E6;
+transition: color 0.8s ease;
+}
+
+.header-logo-name h1:hover{
+  color: #b3afa3;
+  cursor: pointer;
+  }
+
+.header-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  position: right;
+}
+
+.header-social i {
+font-size: 30px;
+color: #4E342E;
+color: #FFF9E6;
+transition: transform 0.5s;
+}
+
+.header-social i:hover {
+  transform: scale(1.09);
+  cursor: pointer;
+}
+
+/*BestSeller section*/
+
+.BestSeller-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin: 100px 0px;
+}
+
+.BestSeller-div {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  flex-grow: 1;
+  gap: 90px;
+  margin: 0px 10px;
+}
+
+.BestSeller-card {
+  flex: 0 0 auto;
+  background: lightgrey;
+  text-align: center;
+  align-items: center;
+  border: solid;
+  border-radius: 50px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.BestSeller-card img {
+  border-radius: 50px;
+  width: 100%;
+}
+
+.BestSeller-card h2{
+  margin: 40px 0;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.BestSeller-card select{
+  width: 50%;
+  margin-bottom: 20px
+}
+
+.BestSeller-card button{
+  width: 60%;
+}
+
+.scroll-button {
+  background: transparent;
+  color: transparent;
+  transition: color 0.3s ease;
+  font-size: 50px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.scroll-button:hover {
+  color: black;
+}
+
+#scroll-left {
+  left: 0;
+}
+
+#scroll-right {
+  right: 0;
+}
+
+@media (max-width: 900px){
+  .BestSeller-card {
+    width: 35%;
+  }
+
+  .BestSeller-div {
+    gap: 70px;
+  }
+}
+
+@media (max-width: 650px){
+  .BestSeller-card {
+    width: 50%;
+  }
+
+  .BestSeller-div {
+    gap: 60px;
+  }
+}
+
+
+@media (max-width: 450px){
+  .BestSeller-card {
+    width: 70%;
+  }
+
+  .BestSeller-div {
+    gap: 50px;
+  }
+}
+
+
+.checkifavailable {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+.checkifavailable p {
+  font-size: 1.5em;
+  }
+
+.checkifavailable p:hover {
+cursor: pointer;
+}
+
+.request-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px 0 10px;
+  margin-bottom: 20px;
+  margin-top: -30px ;
+  background-color: #28a745; 
+  color: #ffffff; 
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 30px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease; 
+  cursor: pointer;
+  word-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.request-button:hover {
+  background-color: #218838; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-2px); 
+}
+
+.request-button:active {
+  background-color: #1e7e34; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(0); 
+}
+
+.sold-out-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 15px;
+  margin-left: 12px;
+  background-color: #dc3545;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: not-allowed;
+}
+
+.sold-out-button:hover {
+  background-color: #c82333;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sold-out-button:active {
+  background-color: #bd2130;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.styled-select {
+  width: 100%;
+  max-width: 300px; 
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8; 
+  border: 2px solid; 
+  border-radius: 5px;
+  color: #333; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.styled-select:hover{
+  border: 2px solid #007bff; 
+}
+
+
+
+/* Stile per la freccia personalizzata */
+.styled-select::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 14px;
+  color: #007bff; 
+}
+
+.styled-select option {
+  padding: 10px;
+}
+
+.checkdisponibility {
+  padding: 12px 24px;
+  font-family: 'Arial', sans-serif; 
+  font-weight: bold; 
+  font-size: 1.5em;
+  color: #ffffff; 
+  background-color: #007bff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none; 
+  text-align: center;
+  margin: 10px 0;
+  word-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Stile per il bottone al passaggio del mouse */
+.checkdisponibility:hover {
+  background-color: #0056b3;
+}
+
+/* Stile per il bottone quando viene cliccato */
+.checkdisponibility:active {
+  background-color: #004085; 
+  transform: scale(0.98); 
+}
+
+/* Stile per il bottone in focus */
+.checkdisponibility:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .checkdisponibility {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+}
+
+
+
+
+/* Newsletter Section */
+.newsletter {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ddd;
+}
+
+.newsletter h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.newsletter p {
+  margin: 0 0 20px;
+  font-size: 16px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-div {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.newsletter button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* media queries per menu hamburgher*/
+@media (max-width: 800px) {
+  .header-social {
+    display: none;
+
+  }
+
+  .HowItWorks-div {
+    margin-top: 0px;
+    }
+
+.hamburger {
+  display: flex;
+  font-size: 60px;
+  cursor: pointer;
+  z-index: 1000;
+  color: black;
+}
+
+/* Stile per il menu nascosto */
+.mobile-menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.mobile-menu li {
+  cursor: pointer;
+}
+
+/* Stile per il menu quando visibile */
+.mobile-menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Stile per gli elementi del menu */
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-menu ul li {
+  margin: 20px 0;
+  margin-bottom: 40px;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+  transition: color 0.3s;
+}
+
+.mobile-menu ul li a:hover {
+  color: #ddd;
+}
+
+.hamburger-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0px;
+}
+}
+
+@media (max-width: 500px){
+  .header-logo-name h1{
+display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
