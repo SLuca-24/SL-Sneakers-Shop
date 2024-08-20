@@ -84,6 +84,7 @@ transition: transform 0.5s;
   width: 100%;
   overflow: hidden;
   margin: 100px 0px;
+  padding: 0px 10px;
 }
 
 .BestSeller-div {
@@ -160,7 +161,7 @@ transition: transform 0.5s;
   }
 
   .BestSeller-div {
-    gap: 70px;
+    gap: 60px;
   }
 }
 
@@ -170,20 +171,41 @@ transition: transform 0.5s;
   }
 
   .BestSeller-div {
-    gap: 60px;
+    gap: 40px;
   }
 }
 
 
-@media (max-width: 450px){
+@media (max-width: 480px){
   .BestSeller-card {
     width: 70%;
   }
 
   .BestSeller-div {
-    gap: 50px;
+    gap: 20px;
   }
 }
+
+@media (max-width: 425px){
+  .BestSeller-container {
+    padding: 0px 20px;
+  }
+
+  .header{
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px){
+  .BestSeller-container {
+    padding: 0px 35px;
+  }
+
+  .header{
+    width: 100%;
+  }
+}
+
 
 
 .checkifavailable {
@@ -509,7 +531,7 @@ display: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  margin: 100px auto;
+  margin: 100px 0px;
   padding: 40px;
 }
 
